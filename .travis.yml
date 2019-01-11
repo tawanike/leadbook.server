@@ -18,7 +18,7 @@ before_install:
 install:
   - yarn
   - yarn build
-  - yarn build --env.project=rbt
+  - yarn build --env.project=leadbook
   - pip install tox
 
 script: tox
