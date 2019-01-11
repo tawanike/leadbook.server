@@ -27,8 +27,8 @@ rest_framework_extras.register(router)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r"^api/(?P<version>(v1))/", include(router.urls)),
-    url(r'^api/(?P<version>(v1))/auth/', obtain_jwt_token),
-    url(r'^api/(?P<version>(v1))/auth/token-refresh/', refresh_jwt_token),
-    url(r'^api/(?P<version>(v1))/auth/token-verify/', verify_jwt_token),
+    url('api/(?P<version>(v1))/', include(router.urls)),
+    url('api/(?P<version>(v1))/auth/', obtain_jwt_token),
+    url('api/(?P<version>(v1))/auth/refresh/', refresh_jwt_token),
+    url('api/(?P<version>(v1))/auth/verify/', verify_jwt_token),
 ]
