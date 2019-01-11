@@ -5,7 +5,7 @@ cache:
   pip: true
 
 env:
-  - TOXENV=django20
+  - TOXENV=py35
 
 install:
   - pip install tox
